@@ -1,0 +1,55 @@
+-- Create new table for deptartment csv
+CREATE TABLE Department (
+  dept_no VARCHAR(5) PRIMARY KEY,
+  dept_name VARCHAR (50)
+);
+
+-- Create new table for Dept_Employee csv
+
+CREATE TABLE Dept_Employee (
+  emp_no INT,
+  dept_no VARCHAR (10) 
+);
+
+-- Create new table for employees csv
+
+CREATE TABLE Employee (
+  emp_no INT NOT NULL PRIMARY KEY,
+  emp_title_ID VARCHAR (5) NOT NULL,
+  birth_date DATE NOT NULL,
+  first_name VARCHAR (50) NOT NULL,
+  last_name VARCHAR (50) NOT NULL,
+  sex VARCHAR (1) NOT NULL,
+  hire_date DATE NOT NULL
+);
+
+-- Create new table for salaries csv
+
+CREATE TABLE Salaries (
+  emp_no INT PRIMARY KEY,
+  salary INT
+);
+
+-- Create new table for titles csv
+
+CREATE TABLE Titles (
+  title_id VARCHAR (10),
+  title VARCHAR (50)
+);
+
+-- Create new table for dept_manager csv
+
+CREATE TABLE Dept_Manager(
+  dept_no VARCHAR (10),
+  emp_no INT PRIMARY KEY
+);
+
+--Drop Tables
+DROP TABLE IF EXISTS departments;
+DROP TABLE IF EXISTS dept_emp;
+DROP TABLE IF EXISTS dept_manager;
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS salaries;
+DROP TABLE IF EXISTS titles;
+
+
